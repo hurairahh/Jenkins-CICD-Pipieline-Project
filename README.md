@@ -19,23 +19,6 @@ The application (`vprofile`) is a robust multi-tier web application that relies 
 
 ---
 
-## 🚀 CI Pipeline Workflow
-
-The declarative [Jenkinsfile](file:///d:/Coding/gitrepos/vprofile-project-ci-jenkins/Jenkinsfile) defines a structured 6-stage continuous integration workflow:
-
-```mermaid
-graph TD
-    A[Source Code Checkout] --> B[Stage 1: Build]
-    B --> C[Stage 2: Unit Test]
-    C --> D[Stage 3: Integration Test]
-    D --> E[Stage 4: Checkstyle Analysis]
-    E --> F[Stage 5: SonarQube & Quality Gates]
-    F --> G[Stage 6: Publish Artifact to Nexus]
-    style B fill:#f9f,stroke:#333,stroke-width:2px
-    style E fill:#bbf,stroke:#333,stroke-width:2px
-    style F fill:#bfb,stroke:#333,stroke-width:2px
-    style G fill:#fbb,stroke:#333,stroke-width:2px
-```
 
 ### 📋 Stage Breakdown
 
@@ -70,19 +53,6 @@ graph TD
 
 ---
 
-## 📁 Repository Structure
-
-*   [src/](file:///d:/Coding/gitrepos/vprofile-project-ci-jenkins/src) — Contains Java Spring application source code.
-*   [vagrant/](file:///d:/Coding/gitrepos/vprofile-project-ci-jenkins/vagrant) — Local VM configurations (Vagrantfiles and shell scripts) for windows, mac, and M1 chips to set up the multi-tier local environment.
-*   [ansible/](file:///d:/Coding/gitrepos/vprofile-project-ci-jenkins/ansible) — Playbooks and templates for setting up Tomcat and configuring application properties.
-*   [userdata/](file:///d:/Coding/gitrepos/vprofile-project-ci-jenkins/userdata) — Automated shell scripts to bootstrap infrastructure on AWS/servers:
-    *   `jenkins-setup.sh`: Installs Java 17 and Jenkins.
-    *   `nexus-setup.sh`: Installs Java 17 and configures Nexus OSS.
-    *   `sonar-setup.sh`: Provisions SonarQube server.
-*   [Jenkinsfile](file:///d:/Coding/gitrepos/vprofile-project-ci-jenkins/Jenkinsfile) — The main CI pipeline definition.
-*   [pom.xml](file:///d:/Coding/gitrepos/vprofile-project-ci-jenkins/pom.xml) — Maven configuration with project dependencies, repositories, and coverage plugins (JaCoCo).
-
----
 
 ## 🛠️ Infrastructure Setup
 
