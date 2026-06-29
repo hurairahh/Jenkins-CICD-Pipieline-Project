@@ -1,4 +1,4 @@
-# VProfile DevOps Project: Jenkins CI/CD Pipeline
+# VProfile DevOps Project: Jenkins CI/CD Pipeline 
 
 A comprehensive CI/CD pipeline automation project for **vprofile**, a multi-tier Java Web Application. This repository contains the complete application source code, infrastructure automation scripts (Vagrant & Ansible), and a declarative **Jenkins Pipeline** to automate the build, test, analysis, and artifact publishing workflow.
 
